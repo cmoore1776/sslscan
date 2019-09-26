@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 ENV \
   VERSION=master \
-  SHA256=9a49aaf5ae51ed14a1dc27f12ad390d68e27ea17ca04c4921739f7827625f6bc
+  SHA256=53c522db93b7c60a3997ad9f6827ece3615356f6f9bbc7e1b5043c2978d1e118
 
 RUN apt update && apt upgrade -y && apt install build-essential zlib1g-dev curl unzip git -y && \
     curl -L https://github.com/rbsec/sslscan/archive/master.zip -o sslscan-${VERSION}.zip  && \
