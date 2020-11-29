@@ -1,6 +1,6 @@
 # sslscan
 
-Dockerfile for https://github.com/rbsec/sslscan based on Ubuntu 18.04 and built from source.
+Dockerfile for https://github.com/rbsec/sslscan based on Ubuntu 20.04 and built from source.
 
 ## Usage
 
