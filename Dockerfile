@@ -2,7 +2,7 @@ FROM debian:buster-slim
 
 ENV \
   VERSION=master \
-  SHA256=6aaf0572db0b263f510364801be73ed89c3397c7d176e0055e7690d40bfbfb61
+  SHA256=a9062ac487a58d821201b1869e9e83a9224e50b8c6daac3c452b452aecfe7b9a
 
 RUN \
     echo "deb-src http://deb.debian.org/debian/ buster main" >> /etc/apt/sources.list && \
