@@ -2,7 +2,7 @@ FROM alpine:3.14
 
 ENV \
   VERSION=master \
-  SHA256=a9062ac487a58d821201b1869e9e83a9224e50b8c6daac3c452b452aecfe7b9a
+  SHA256=b603824433404769e8ebe39749f6b160fe1a0614d23dc19e0fdce6847610b1e6
 
 RUN \
   apk update && apk add alpine-sdk perl zlib-dev linux-headers curl unzip git && \
