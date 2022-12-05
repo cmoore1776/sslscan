@@ -7,9 +7,9 @@ Dockerfile for https://github.com/rbsec/sslscan based on Alpine Linux and built 
 ```bash
 $ docker run --rm -it shamelesscookie/sslscan:latest christianmoore.me
 Version: 2.0.15-static
-OpenSSL 1.1.1q-dev  xx XXX xxxx
+OpenSSL 1.1.1t-dev  xx XXX xxxx
 
-Connected to 108.139.29.12
+Connected to 13.249.190.56
 
 Testing SSL server christianmoore.me on port 443 using SNI name christianmoore.me
 
@@ -58,14 +58,12 @@ Subject:  christianmoore.me
 Altnames: DNS:christianmoore.me
 Issuer:   Amazon
 
-Not valid before: Oct 24 00:00:00 2021 GMT
-Not valid after:  Nov 21 23:59:59 2022 GMT
+Not valid before: Sep 23 00:00:00 2022 GMT
+Not valid after:  Oct 21 23:59:59 2023 GMT
 ```
 
 ## build
 
 ```bash
-export VERSION=2.0.15
-export SHA256=0986ac647098b877f24c863c261bfb7cf545a41fd1120047337dfc44812c69a0
-docker buildx build --no-cache --platform linux/amd64,linux/arm64 --build-arg VERSION --build-arg SHA256 -t shamelesscookie/sslscan:latest -t shamelesscookie/sslscan:${VERSION} --pull --push .
+docker buildx build --no-cache --platform linux/amd64,linux/arm64 -t shamelesscookie/sslscan:latest --push .
 ```
