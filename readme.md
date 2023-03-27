@@ -1,13 +1,13 @@
 # sslscan
 
-Dockerfile for https://github.com/rbsec/sslscan based on Alpine Linux and built from source.
+Dockerfile for [sslscan](https://github.com/rbsec/sslscan) based on Alpine Linux and built from source.
 
 ## Usage
 
 ```bash
 $ docker run --rm -it shamelesscookie/sslscan:latest christianmoore.me
 Version: 2.0.15-static
-OpenSSL 1.1.1t-dev  xx XXX xxxx
+OpenSSL 1.1.1u-dev  xx XXX xxxx
 
 Connected to 13.249.190.56
 
@@ -65,5 +65,5 @@ Not valid after:  Oct 21 23:59:59 2023 GMT
 ## build
 
 ```bash
-docker buildx build --no-cache --platform linux/amd64,linux/arm64 -t shamelesscookie/sslscan:latest --push .
+docker buildx build --no-cache --platform linux/amd64,linux/arm64 -t cmoore1776/sslscan:latest --pull --push .
 ```
