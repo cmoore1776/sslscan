@@ -1,15 +1,14 @@
-FROM alpine:3.17
+FROM alpine:3.18
 
-ARG VERSION SHA256
+ARG VERSION
 
 RUN \
   apk update && \
-  apk add alpine-sdk perl zlib-dev linux-headers curl unzip git && \
-  curl -L https://github.com/rbsec/sslscan/archive/refs/heads/master.zip -o sslscan-master.zip  && \
-  unzip sslscan-master.zip && \
-  cd sslscan-master && \
+  apk add alpine-sdk coreutils perl zlib-dev linux-headers curl unzip git && \
+  git clone --branch ${VERSION} --depth 1 https://github.com/rbsec/sslscan.git && \
+  cd sslscan && \
   make static && make install && \
-  cd / && rm -rf sslscan-master && \
+  cd / && rm -rf sslscan && \
   adduser -D -g '' sslscan && \
   apk del alpine-sdk perl zlib-dev linux-headers curl unzip git && \
   rm -rf /var/cache/apk/*
