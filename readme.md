@@ -6,8 +6,8 @@
 
 ```bash
 $ docker run --rm -it cmoore1776/sslscan:latest christianmoore.me
-Version: 2.1.3-static
-OpenSSL 3.0.12 24 Oct 2023
+Version: 2.1.5-static
+OpenSSL 3.0.15 3 Sep 2024
 
 Connected to 13.249.190.56
 
@@ -65,6 +65,6 @@ Not valid after:  Sep 20 23:59:59 2024 GMT
 ## build
 
 ```bash
-export VERSION=2.1.4
+export VERSION=2.1.5
 docker buildx build --build-arg VERSION --no-cache --platform linux/amd64,linux/arm64 -t cmoore1776/sslscan:${VERSION} -t cmoore1776/sslscan:latest --pull --push .
 ```
