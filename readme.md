@@ -65,6 +65,6 @@ Not valid after:  Sep 20 23:59:59 2024 GMT
 ## build
 
 ```bash
-export VERSION=2.1.5
+export VERSION=2.1.6
 docker buildx build --build-arg VERSION --no-cache --platform linux/amd64,linux/arm64 -t cmoore1776/sslscan:${VERSION} -t cmoore1776/sslscan:latest --pull --push .
 ```
